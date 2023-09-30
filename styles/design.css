@@ -1,0 +1,289 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+.mobile-nav{
+  display: none;
+}
+.desktop-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 30px 0px;
+}
+.nav-links{
+  display: flex;
+}
+.logo{
+  margin-right: 60px;
+}
+.features{
+  cursor: pointer;
+}
+.link:hover #dropdown-link1{
+  display: flex;
+}
+.link:hover #dropdown-link2{
+  display: flex;
+}
+.features-dropdown-menu, .company-dropdown-menu{
+  position: absolute;
+  padding: 15px 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px hsl(0, 0%, 86%);
+  display: none;
+  flex-direction: column;
+}
+.link:hover .features-dropdown-menu{
+  display: flex;
+}
+.arrow-down{
+  display: none;
+}
+.link:hover .arrow-up{
+  display: none;
+}
+.link:hover .arrow-down{
+  display: inline-flex;
+}
+#arrow-up, #arrow-down{
+  cursor: pointer;
+}
+.features-dropdown-menu{
+  margin: 10px 0px 0px -20px;
+  cursor: pointer;
+}
+.company-dropdown-menu{
+  margin: 10px 0px 0px 18px;
+  cursor: pointer;
+}
+.company-dropdown-menu .to-do{
+  padding-bottom: 10px;
+}
+.inner-link{
+  display: flex;
+  padding-bottom: 10px;
+}
+.inner-link .img{
+  padding-right: 10px;
+}
+.to-do{
+  font-size: 13px;
+}
+a{
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+  font-weight: 500;
+  padding-left: 30px;
+}
+a:hover{
+  color: hsl(0, 0%, 8%);
+}
+#arrow-up{
+  display: none;
+}
+.login{
+  margin-right: 20px;
+  border: none;
+  background-color: white;
+  color: hsl(0, 0%, 41%);
+  cursor: pointer;
+}
+.login:hover{
+  color: hsl(0, 0%, 8%);
+}
+.register{
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: 1px solid hsl(0, 0%, 41%);
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 41%);
+  cursor: pointer;
+}
+.register:hover{
+  color: hsl(0, 0%, 8%);
+  border: 1px solid hsl(0, 0%, 8%);
+}
+
+
+
+/***********************Main*****************************/
+
+main{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  padding-bottom: 20px;
+}
+.left{
+  width: 50%;
+}
+.right{
+  width: 50%;
+}
+.right img{
+  width: 80%;
+  margin-left: 120px;
+}
+h1{
+  margin-top: 80px;
+  font-size: 70px;
+  line-height: 1;
+}
+h4{
+  margin: 20px 0px;
+  width: 70%;
+  text-align: justify;
+  color: hsl(0, 0%, 41%);
+}
+.learn-more{
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid hsl(0, 0%, 41%);
+  background-color:  hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  margin: 30px 0px 70px 0px;
+  cursor: pointer;
+}
+.learn-more:hover{
+  color: hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 98%);
+  border: 1px solid hsl(0, 0%, 8%);
+}
+.clients{
+  margin-left: 20px;
+  width: 15%;
+}
+.mobile-img{
+  display: none;
+}
+
+
+@media (max-width: 375px){
+  .desktop-nav{
+    display: none;
+  }
+  .mobile-nav{
+    display: flex;
+    padding: 20px 0px;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.113);
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: white;
+    height: 100vh;
+    right: 0;
+    position: absolute;
+  }
+  .nav-links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .button-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  .button-container .login{
+    padding-bottom: 15px;
+    font-size: 13px;
+    margin: 0 auto;
+  }
+  .button-container .register{
+    font-size: 13px;
+  }
+  .link{
+    margin-bottom: 20px;
+  }
+  .link a{
+    font-size: 13px;
+  }
+  
+  .features-dropdown-menu{
+    display: none;
+    position: relative;
+    padding: 20px 30px;
+    margin: 0 auto;
+    border-radius: 0;
+    box-shadow: 0px 3px 3px hsl(0, 0%, 86%);
+  }
+  .features-dropdown-menu .to-do, .calender, .reminder, .planning{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
+  .to-do img, .calender img, .reminder img, .planning img{
+    margin-right: 10px;
+  }
+  .link:hover .company-dropdown-menu{
+    display: flex;
+  }
+  .company-dropdown-menu{
+    display: none;
+    position: relative;
+    padding: 20px 30px;
+    margin: 0;
+    box-shadow: 0px 3px 3px hsl(0, 0%, 86%);
+    border-radius: 0;
+  }
+  .right{
+    display: none;
+  }
+  .mobile-img{
+    display: flex;
+  }
+  .mobile-img img{
+    width: 100%;
+  }
+  .nav-open{
+    cursor: pointer;
+  }
+  main{
+    width: 100%;
+    flex-direction: column;
+  }
+  .left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h4{
+    text-align: center;
+    width: 90%;
+    font-size: 13px;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  .learn-more{
+    margin: 0;
+  }
+}
